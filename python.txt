@@ -1,0 +1,197 @@
+1. What are python modules?
+
+   In Python, Modules are simply files with the “.py” extension containing Python code that can be imported inside another Python Program.
+   we can consider a module to be the same as a code library or a file that contains a set of functions that you want to include in your application.
+   With the help of modules, we can organize related functions, classes, or any code block in the same file. 
+   So, It is considered a best practice while writing bigger codes for production-level projects in Data Science is to split the large Python code blocks into modules containing up to 300–400 lines of code.
+   The module contains the following components:
+   Definitions and implementation of classes,
+   Variables, and
+   Functions that can be used inside another program.
+
+
+2. What are the built-in data-types in Python?
+
+   Numeric data types: int, float, complex 
+   [Python numeric data type is used to hold numeric values]
+
+   String data types: str 
+   [The string is a sequence of characters. Python supports Unicode characters. Generally, strings are represented by either single or double-quotes]
+
+   Sequence types: list, tuple, range
+
+   Binary types: bytes, bytearray, memoryview
+   Mapping data type: dict
+   [Mappings are mutable objects. There is currently only one mapping type, the dictionary . A dictionary's keys are almost arbitrary values]
+
+   Boolean type: bool
+   [The BOOLEAN data type is a 1-byte data type. The legal values for Boolean are true ('t'), false ('f'), or NULL. The values are not case sensitive.]
+   Set data types: set, frozenset
+
+
+3. Difference between mutable and immutable data types in python?
+
+  Mutable objects can change their state or contents and immutable objects can't change their state or content,this makes immutable objects final objects.. 
+  Immutable Objects, These are of in-built types like int, float, bool, string, unicode, tuple.
+  In simple words, an immutable object can't be changed after it is created, This makes immutable objects final objects.
+
+
+4. What is name space in Python?
+
+  A namespace is a collection of currently defined symbolic names along with information about the object that each name references.
+  Namespace gets created automatically when a module or package starts execution. 
+  Hence, create namespace in python, all you have to do is call a function/ object or import a module/package.
+  There are 4 types of Python namespaces-
+           global, local, enclosing and built-in. It's the same with a variable scope in python.
+  Built-in:- it contains the names of all of Python’s built-in objects. These are available at all times when Python is running.eg(id() , print())
+  Global:- it belongs to the python script or the current module. The global namespace for a module is created when the module definition is read. Python creates the global namespace when the main program body starts, and it remains in existence until the interpreter terminates.
+  Local:- the Python interpreter creates a new namespace when the function is executed. The local namespaces remain in existence until the function terminates. The function can also consist of another function..
+  Enclosed:-  When a function is defined inside a function, it creates an enclosed namespace.
+
+
+5. What is the difference between list and tuples in Python?
+
+  The primary difference between tuples and lists is that tuples are immutable as opposed to lists which are mutable. Therefore, it is possible to change a list but not a tuple. 
+  Tuples are also more memory efficient than the lists.
+  The items in the list are separated with the comma (,) and enclosed with the square brackets [].
+  The items in the tuple are separated with the comma (,) and enclosed with the square parenthesis ().
+
+
+6.  What are local variables and global variables in Python?
+ 
+    Global variable:-
+      Variables declared outside of a function are usually global.
+        x=5
+          def mufunction(a,b)
+          c=a+b+c
+          return c
+
+      x is a global variable here, the function, myfunction(a.b) can access the value stored in x.
+      Global varibales can be used in all function.
+      Varibales are destroyed when the program is terminated.
+      Global variables are used when values are to be shared among different functions.
+
+   Local variables:-
+        Variable are declares within a function.
+        It can be used only in function in which they declared.
+        Local  variabls are distroyed when control leave the function.
+        Variables are used when the value are to be used within a function.
+      
+    
+7. What do *args and **kwargs mean?
+
+  Arbitrary Arguments, *args
+  Arbitrary Keyword Arguments, **kwargs  
+  We take the help of special symbols pre-defined by Python which are known as *args and **kwargs. 
+  *args stands for arguments that are passed to the function .This way the function will receive a tuple of arguments, and can access the items accordingly
+  **kwargs stands for keyword arguments which are passed along with the values into the function.This way the function will receive a dictionary of arguments, and can access the items accordingly
+
+   eg.*args:
+
+   def my_function(*kids):
+     print("The youngest child is " + kids[2])
+
+   my_function("Emil", "Tobias", "Linus")
+
+   o/p:
+   The youngest child is Linus
+
+   eg.**kwags:
+  
+    def my_function(**kid):
+      print("His last name is " + kid["lname"])
+
+     my_function(fname = "Tobias", lname = "Refsnes")
+
+   o/p:
+   His last name is Refsnes
+
+
+8. How is memory managed in Python?
+
+   Memory management in Python involves a private heap containing all Python objects and data structures.
+   The management of this private heap is ensured internally by the Python memory manager.
+   Private heap- All objects and instance variables are stored in the heap memory. When a variable is created in Python, it is stored in a private heap which will then allow for allocation and deallocation. The heap memory enables these variables to be accessed globally by all your program's methods.
+
+
+9. What are the key features of Python?
+
+   Easy to Code:- Python and all its advanced concepts, packages and modules might take some more time. However, learning the basic Python syntax is very easy, as compared to other popular languages like C, C++, and Java. 
+   
+   Easy to Read:- Python code looks like simple English words. There is no use of semicolons or brackets, and the indentations define the code block. can tell what the code is supposed to do simply by looking at it. 
+  
+   Free and Open-Source:- Python is developed under an OSI-approved open source license. Hence, it is completely free to use, even for commercial purposes. It doesn't cost anything to download Python or to include it in your application. It can also be freely modified and re-distributed. Python can be downloaded from the official Python website.
+  
+   Robust Standard Library Robust Standard Library:- Python has an extensive standard library available for anyone to use. This means that programmers don’t have to write their code for every single thing unlike other programming languages.
+  
+   Interpreted:- When a programming language is interpreted, it means that the source code is executed line by line, and not all at once.
+ 
+   Portable:- Python is portable in the sense that the same code can be used on different machines. Suppose you write a Python code on a Mac. If you want to run it on Windows or Linux later, you don’t have to make any changes to it.
+
+   Object-Oriented and Procedure-Oriented:- A programming language is object-oriented if it focuses design around data and objects, rather than functions and logic.
+  
+   Dynamically Typed:- The type of the variable can be decided during runtime. This makes Python a dynamically typed language.
+ 
+   High-level Language:- Python is a high-level programming language because programmers don’t need to remember the system architecture, nor do they have to manage the memory. This makes it super programmer-friendly and is one of the key features of Python.
+ 
+   Extensible:-A programming language is said to be extensible if it can be extended to other languages. Python code can also be written in other languages like C++, making it a highly extensible language.
+
+
+
+10. What type of language is python?
+
+   Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes.
+   Python is an advanced scripting language that is being used successfully to glue together large software components.
+
+
+11. How is Python an interpreted language?
+   
+    Python is an interpreted language, which means the source code of a Python program is converted into bytecode that is then executed by the Python virtual machine.
+    Python is different from major compiled languages, such as C and C + +, as Python code is not required to be built and linked like code for these languages.
+
+
+12. What are data structures?
+
+    The basic Python data structures in Python include list, set, tuples, and dictionary. 
+    Each of the data structures is unique in its own way. Data structures are “containers” that organize and group data according to type.
+
+      List:- lists are used to store multiple items in a single variable.
+             list items are ordered, changeable, and allow duplicate values.
+             list=["a","b","c"]
+
+      Tuples:-used to store multiple items in a single variable.
+             tuple items are ordered, unchangeable, and allow duplicate values
+             tupls=("a","b","c")
+
+      Set:- used to store multiple items in a single variable.
+            set is a collection which is unordered, unchangeable, and unindexed
+            set={"a","b","c"}
+           
+     Dictionaries:- used to store data values in key:value pairs.
+                    A dictionary is a collection which is ordered, changeable and do not allow duplicates.
+                    thisdict = {
+                      "name": "a",
+                      "address": "b",
+                    }
+
+
+13. Major Differences between python 2 and python 3?
+ 
+    Some of the major changes in Python 3 include changing the print declaration to a built-in function, improved integer division, and improved Unicode support.
+    In Python 2, print is a statement that does not need a parenthesis. In Python 3, print is a function and the values need to be written in parenthesis.
+
+
+14. What is type conversion?
+   
+    Type conversion in Python refers to the direct conversion of object of one data type to another data type.
+    In this conversion, Python interpreter automatically performs conversion. 
+    In Python, we have the flexibility to convert one data type to another using a specific function.
+
+
+15.  What are the applications of python?
+
+     Python is often used as a support language for software developers, for build control and management, testing, and in many other ways. 
+     SCons for build control.
+     Buildbot and Apache Gump for automated continuous compilation and testing.
+     Roundup or Trac for bug tracking and project management.
+    
